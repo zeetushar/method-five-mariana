@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Account</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div data-mariana-integrations="/account"></div>
+    <script>
+      (function () {
+        var TENANT_NAME = 'themethodfive';
+        var d = document;
+        var sA = ['polyfills', 'js'];
+
+        for (var i = 0; i < sA.length; i++) {
+          var s = d.createElement('script');
+          s.src = 'https://' + TENANT_NAME + '.marianaiframes.com/' + sA[i];
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        }
+      })();
+    </script>
+  </body>
+</html>
